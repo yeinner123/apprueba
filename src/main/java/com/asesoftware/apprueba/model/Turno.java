@@ -2,13 +2,9 @@ package com.asesoftware.apprueba.model;
 
 import com.fasterxml.jackson.annotation.*;
 import lombok.Data;
-import lombok.Value;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-
 import java.io.Serializable;
-import java.util.List;
 
 @Data
 @Entity
