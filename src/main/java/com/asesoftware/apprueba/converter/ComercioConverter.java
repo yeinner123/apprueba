@@ -2,7 +2,6 @@ package com.asesoftware.apprueba.converter;
 
 import com.asesoftware.apprueba.model.Comercio;
 import com.asesoftware.apprueba.model.ComercioResponse;
-//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component

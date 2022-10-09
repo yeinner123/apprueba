@@ -34,6 +34,5 @@ public class ComercioResponse {
 	public void setComercio(Comercio comercio) {
 		this.comercio = comercio;
 	}
-
     
 }

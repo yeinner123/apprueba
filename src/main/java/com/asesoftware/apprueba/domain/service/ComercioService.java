@@ -6,7 +6,6 @@ import com.asesoftware.apprueba.repository.IComercio;
 import com.asesoftware.apprueba.domain.proxy.IComercioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-//import java.sql.SQLException;
 import static com.asesoftware.apprueba.tools.Constants.*;
 
 @Service

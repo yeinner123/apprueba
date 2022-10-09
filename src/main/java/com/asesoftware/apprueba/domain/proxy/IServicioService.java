@@ -1,5 +1,9 @@
 package com.asesoftware.apprueba.domain.proxy;
 
-public class IServicioService {
+import com.asesoftware.apprueba.model.ServicioResponse;
 
+public interface IServicioService {
+
+	public ServicioResponse findByIdServicio(Integer id);
+	
 }
