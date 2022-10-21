@@ -8,13 +8,13 @@ public class Turno {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idTurno;
-	@Column
+	@Column(name = "fecha_turno")
 	private String fechaTurno;
-	@Column
+	@Column(name = "hora_inicio")
 	private String horaInicio;
-	@Column
+	@Column(name = "hora_fin")
 	private String horaFin;
-	@Column
+	@Column(name = "estado")
 	private String estado;
 	
 	@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
@@ -22,7 +22,15 @@ public class Turno {
 	private Servicio servicio;
 
 	public Turno() {
+	}
+
+	public Turno(Integer idTurno, String fechaTurno, String horaInicio, String horaFin, String estado) {
 		super();
+		this.idTurno = idTurno;
+		this.fechaTurno = fechaTurno;
+		this.horaInicio = horaInicio;
+		this.horaFin = horaFin;
+		this.estado = estado;
 	}
 
 	public String getFechaTurno() {
@@ -62,7 +70,5 @@ public class Turno {
 		return "Turno [idTurno=" + idTurno + ", fechaTurno=" + fechaTurno + ", horaInicio=" + horaInicio 
 				+ ", horaFin=" + horaFin + ", estado=" + estado + ", servicio=" + servicio + "]";
 	}
-	
-	
-	
+		
 }

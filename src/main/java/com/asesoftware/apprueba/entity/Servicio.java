@@ -9,13 +9,13 @@ public class Servicio {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idServicio;
-	@Column
+	@Column(name = "nom_servicio")
 	private String nomServicio;
-	@Column
+	@Column(name = "hora_apertura")
 	private String horaApertura;
-	@Column
+	@Column(name = "hora_cierre")
 	private String horaCierre;
-	@Column
+	@Column(name = "duracion")
 	private Integer duracion;
 	
 	@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
@@ -26,39 +26,31 @@ public class Servicio {
 	private List<Turno> turnos;
 
 	public Servicio() {
+	}
+
+	public Servicio(Integer idServicio, String nomServicio, String horaApertura, String horaCierre, Integer duracion) {
 		super();
+		this.idServicio = idServicio;
+		this.nomServicio = nomServicio;
+		this.horaApertura = horaApertura;
+		this.horaCierre = horaCierre;
+		this.duracion = duracion;
 	}
 
 	public String getNomServicio() {
 		return this.nomServicio;
 	}
 
-	public void setNomServicio(String nomServicio) {
-		this.nomServicio = nomServicio;
-	}
-
 	public String getHoraApertura() {
 		return this.horaApertura;
-	}
-
-	public void setHoraApertura(String horaApertura) {
-		this.horaApertura = horaApertura;
 	}
 
 	public String getHoraCierre() {
 		return this.horaCierre;
 	}
 
-	public void setHoraCierre(String horaCierre) {
-		this.horaCierre = horaCierre;
-	}
-
 	public Integer getDuracion() {
 		return this.duracion;
-	}
-
-	public void setDuracion(Integer duracion) {
-		this.duracion = duracion;
 	}
 
 	@Override
