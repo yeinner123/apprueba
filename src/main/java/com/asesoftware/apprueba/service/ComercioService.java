@@ -3,22 +3,31 @@ package com.asesoftware.apprueba.service;
 import java.util.List;
 import java.util.Optional;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.asesoftware.apprueba.entity.Comercio;
 import com.asesoftware.apprueba.repository.ComercioRepository;
 
-@Service
-public class ComercioService {
+@Service("comercioService")
+@Transactional
+public class ComercioService implements IComercioService{
+
 	@Autowired
-	private ComercioRepository iComercio;
+	@Qualifier("comercioRepository")
+	private ComercioRepository comercioRepository;
 	
-	public List<Comercio> getAllComercios() {
-		return iComercio.findAll();
+	@Override
+	public List<Comercio> findAllComercio() {
+		return (List<Comercio>) comercioRepository.findAll();
 	}
-	
-	public Optional<Comercio> getComercio(Integer idComercio) {
-		return iComercio.findById(idComercio);
+
+	@Override
+	public Optional<Comercio> findByIdComercio(Integer idComercio) {
+		return comercioRepository.findById(idComercio);
 	}
+
 }

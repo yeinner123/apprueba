@@ -1,10 +1,9 @@
 package com.asesoftware.apprueba.entity;
 
 import javax.persistence.*;
-import lombok.Data;
 
-@Data
 @Entity
+@Table(name = "turno")
 public class Turno {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
