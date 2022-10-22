@@ -27,7 +27,7 @@ public class ComercioController {
 	}
 	
 	@GetMapping(path = "/findByIdComercio", produces = {"application/json"})
-	public Optional<Comercio> findByIdComercio(@Valid @RequestParam Integer idComercio) {
+	public Optional<Comercio> findByIdComercio(@RequestParam Integer idComercio) {
 		return comercioService.findByIdComercio(idComercio);
 	}
 }
