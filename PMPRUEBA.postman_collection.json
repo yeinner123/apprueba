@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "c5f32085-4c90-4ab8-b07b-bf66b2368716",
+		"name": "PMPRUEBA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "findByIdComercio",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/comercio/findByIdComercio/idComercio?idComercio=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comercio",
+						"findByIdComercio",
+						"idComercio"
+					],
+					"query": [
+						{
+							"key": "idComercio",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findAllComercio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/comercio/findAllComercio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comercio",
+						"findAllComercio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findByIdServicio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/servicio/findByIdServicio/idServicio?idServicio=26",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"servicio",
+						"findByIdServicio",
+						"idServicio"
+					],
+					"query": [
+						{
+							"key": "idServicio",
+							"value": "26"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findAllServicio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/servicio/findAllServicio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"servicio",
+						"findAllServicio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findAllTurno",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/turno/findAllTurno",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"turno",
+						"findAllTurno"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveTurno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n    \"fechaTurno\": \"2022-10-24\",\r\n    \"horaInicio\": \"11:00:00\",\r\n    \"horaFin\": \"14:00:00\",\r\n    \"estado\": \"Pendiente\",\r\n    \"servicio\":\r\n    {\r\n        \"idServicio\": 29,\r\n        \"nomServicio\": \"Diseño Room\",\r\n        \"horaApertura\": \"08:00:00\",\r\n        \"horaCierre\": \"17:00:00\",\r\n        \"duracion\": 3,\r\n        \"comercio\":\r\n        {\r\n            \"idComercio\": 2,\r\n            \"nomComercio\": \"DESIGN CENTER\",\r\n            \"aforoMaximo\": 5\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/turno/saveTurno",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"turno",
+						"saveTurno"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
