@@ -17,16 +17,14 @@ public class Turno {
 	@Column(name = "estado")
 	private String estado;
 	
-	@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
+	@ManyToOne(cascade = {CascadeType.REFRESH})
 	@JoinColumn(name = "idServicio")
 	private Servicio servicio;
-
+	
 	public Turno() {
 	}
 
-	public Turno(Integer idTurno, String fechaTurno, String horaInicio, String horaFin, String estado) {
-		super();
-		this.idTurno = idTurno;
+	public Turno(String fechaTurno, String horaInicio, String horaFin, String estado) {
 		this.fechaTurno = fechaTurno;
 		this.horaInicio = horaInicio;
 		this.horaFin = horaFin;
@@ -64,11 +62,19 @@ public class Turno {
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
+	
+	public Servicio getServicio() {
+		return servicio;
+	}
+
+	public void setServicio(Servicio servicio) {
+		this.servicio = servicio;
+	}
 
 	@Override
 	public String toString() {
 		return "Turno [idTurno=" + idTurno + ", fechaTurno=" + fechaTurno + ", horaInicio=" + horaInicio 
-				+ ", horaFin=" + horaFin + ", estado=" + estado + ", servicio=" + servicio + "]";
+				+ ", horaFin=" + horaFin + ", estado=" + estado + "]";
 	}
 		
 }

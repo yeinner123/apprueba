@@ -21,22 +21,24 @@ public class Servicio {
 	@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
 	@JoinColumn(name = "idComercio")
 	private Comercio comercio;
-	
+
 	@OneToMany(mappedBy = "servicio", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
 	private List<Turno> turnos;
-
+	
 	public Servicio() {
 	}
 
-	public Servicio(Integer idServicio, String nomServicio, String horaApertura, String horaCierre, Integer duracion) {
-		super();
-		this.idServicio = idServicio;
+	public Servicio(String nomServicio, String horaApertura, String horaCierre, Integer duracion, List<Turno> turnos) {
 		this.nomServicio = nomServicio;
 		this.horaApertura = horaApertura;
 		this.horaCierre = horaCierre;
 		this.duracion = duracion;
 	}
 
+	public Integer getIdServicio() {
+		return this.idServicio;
+	}
+	
 	public String getNomServicio() {
 		return this.nomServicio;
 	}
@@ -52,11 +54,14 @@ public class Servicio {
 	public Integer getDuracion() {
 		return this.duracion;
 	}
+	
+	public String getComercio() {
+		return comercio.getNomComercio();
+	}
 
 	@Override
 	public String toString() {
 		return "Servicio [idServicio=" + idServicio + ", nomServicio=" + nomServicio + ", horaApertura=" + horaApertura 
 				+ ", horaCierre=" + horaCierre + ", duracion=" + duracion + ", comercio=" + comercio + "]";
 	}
-	
 }

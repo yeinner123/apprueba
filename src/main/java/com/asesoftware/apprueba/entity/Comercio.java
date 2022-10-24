@@ -20,11 +20,13 @@ public class Comercio {
 	public Comercio() {
 	}
 	
-	public Comercio(Integer idComercio, String nomComercio, Integer aforoMaximo, List<Servicio> servicios) {
-		super();
-		this.idComercio = idComercio;
+	public Comercio(String nomComercio, Integer aforoMaximo, List<Servicio> servicios) {
 		this.nomComercio = nomComercio;
 		this.aforoMaximo = aforoMaximo;
+	}
+	
+	public Integer getIdComercio() {
+		return idComercio;
 	}
 
 	public String getNomComercio() {
