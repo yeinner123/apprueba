@@ -15,7 +15,6 @@ public class TurnoConverter {
 		turno.setHoraFin(request.getHoraFin());
 		turno.setEstado(request.getEstado());
 		turno.setServicio(request.getServicio());
-		System.out.println(turno);
 		return turno;
 	}
 	    
