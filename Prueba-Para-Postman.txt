@@ -1,0 +1,42 @@
+{  
+    "fechaTurno": "2022-10-24",
+    "horaInicio": "08:00:00",
+    "horaFin": "11:00:00",
+    "estado": "Pendiente",
+    "servicio":
+    {
+        "idServicio": 28,
+        "nomServicio": "Diseño Cocina",
+        "horaApertura": "08:00:00",
+        "horaCierre": "17:00:00",
+        "duracion": 3,
+        "comercio":
+        {
+            "idComercio": 2,
+            "nomComercio": "DESIGN CENTER",
+            "aforoMaximo": 5
+        }
+    }
+}
+
+{  
+    "fechaTurno": "2022-10-24",
+    "horaInicio": "11:00:00",
+    "horaFin": "14:00:00",
+    "estado": "Pendiente",
+    "servicio":
+    {
+        "idServicio": 29,
+        "nomServicio": "Diseño Room",
+        "horaApertura": "08:00:00",
+        "horaCierre": "17:00:00",
+        "duracion": 3,
+        "comercio":
+        {
+            "idComercio": 2,
+            "nomComercio": "DESIGN CENTER",
+            "aforoMaximo": 5
+        }
+    }
+}
+
